@@ -41,14 +41,14 @@
      #1.2 Assigning column names:
     
        colnames(x_train) <- features[,2] 
-       colnames(y_train) <-"activityId"
-       colnames(subject_train) <- "subjectId"
+       colnames(y_train) <-"activity"
+       colnames(subject_train) <- "subject"
 
        colnames(x_test) <- features[,2] 
-       colnames(y_test) <- "activityId"
-       colnames(subject_test) <- "subjectId"
+       colnames(y_test) <- "activity"
+       colnames(subject_test) <- "subject"
 
-       colnames(activityLabels) <- c('activityId','activityType')
+       colnames(activityLabels) <- c('activity','activityType')
 
     #1.3 Merging all data in one set "mergedata":
     
