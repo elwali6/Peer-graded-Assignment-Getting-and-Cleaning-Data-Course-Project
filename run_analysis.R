@@ -109,12 +109,12 @@
       
     #5.1 Making second tidy data set
 
-   secTidySet <- aggregate(. ~subject + activity, mergedata, mean)
-   secTidySet <- secTidySet[order(secTidySet$subject, secTidySet$activity),]
+   Tidy2 <- aggregate(. ~subject + activity, mergedata, mean)
+    Tidy2 <- Tidy2[order(Tidy2$subject, Tidy2$activity),]
 
    #5.2 Writing second tidy data set in txt file
 
-   write.table(secTidySet, "secTidySet.txt", row.name=FALSE,quote = FALSE)
-   View(secTidySet)
+   write.table(Tidy2, "Tidy2.txt", row.name=FALSE,quote = FALSE)
+   View(Tidy2)
   
    
