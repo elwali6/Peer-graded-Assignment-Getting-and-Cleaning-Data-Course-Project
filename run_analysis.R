@@ -38,7 +38,6 @@ activityLabels = read.table('./data/UCI HAR Dataset/activity_labels.txt')
 activityLabels[,2] <- as.character(activityLabels[,2])
 
 #1.2 Assigning column names:
-
 colnames(x_train) <- features[,2] 
 colnames(y_train) <-"activity"
 colnames(subject_train) <- "subject"
@@ -51,9 +50,15 @@ colnames(activityLabels) <- c('subject','activity')
 
 #1.3 Merging all data in one set "mergedata":
 
-mrg_train <- cbind(y_train, subject_train, x_train)
-mrg_test <- cbind(y_test, subject_test, x_test)
+mrg_train <- cbind(subject_train, y_train, x_train)
+sum(is.na(mrg_train))
+
+mrg_test <- cbind(subject_test,y_test, x_test)
+sum(is.na(mrg_test))
+
 mergedata <- rbind(mrg_train, mrg_test)
+sum(is.na(mergedata))
+
 
 
 ##############################################################################
@@ -85,7 +90,7 @@ featuresWanted.names <- gsub('[-()]', '', featuresWanted.names)
 #3.3 Making nessesary subset from mergedata:
 
 colnames(mergedata) <- c("subject", "activity", featuresWanted.names)
-
+sum(is.na(mergedata))
 
 
 
@@ -97,6 +102,7 @@ colnames(mergedata) <- c("subject", "activity", featuresWanted.names)
 mergedata$activity <- factor(mergedata$activity, levels = activityLabels[,1], labels = activityLabels[,2])
 mergedata$subject <- as.factor(mergedata$subject)
 tidy<-mergedata
+sum(is.na(tidy))
 
 write.table(tidy, "tidy.txt", row.names = FALSE, quote = FALSE)
 View(tidy)
@@ -111,6 +117,7 @@ View(tidy)
 
 tidy2 <- aggregate(. ~subject + activity, mergedata, mean)
 tidy2 <- tidy2[order(tidy2$subject, tidy2$activity),]
+sum(is.na(tidy2))
 
 #5.2 Writing second tidy data set in txt file
 
