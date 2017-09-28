@@ -221,7 +221,7 @@ The following transformations were applied to the source data:
 1. The training and test sets were merged to create one data set.
 2. The measurements on the mean and standard deviation (i.e. signals containing the strings `mean` and `std`) were extracted for each measurement, and the others were discarded.
 3. The activity identifiers (originally coded as integers between 1 and 6) were replaced with descriptive activity names (see [Identifiers](#identifiers) section).
-4. The special characters (i.e. `(`, `)`, and `-`) were removed. (e.g. `tBodyAcc-mean()-X` was expanded to `tBodyAccMeanX`). 
+4. The special characters (i.e. `(`, `)`, and `-`) were removed. (e.g. `tBodyAcc-mean()-X` (timeDomainBodyAccelerometerMeanX) was expanded to `tBodyAccMeanX`). 
 5. From the data set in step 4, the final data set was created with the average of each variable for each activity and each subject.
 
 The collection of the source data and the transformations listed above were implemented by the `run_analysis.R` R script (see `README.md` file for usage instructions).
