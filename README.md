@@ -31,8 +31,8 @@ The R script `run_analysis.R` can be used to create the data set. It retrieves t
 - Extract only the measurements on the mean and standard deviation for each measurement.
 - Use descriptive activity names to name the activities in the data set.
 - Appropriately label the data set with descriptive variable names.
-- Create a second, independent tidy set with the average of each variable for each activity and each subject.
-- Write the data set to the `tidy.txt` file.
+- Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+- Write the tidy data set to the `tidy.txt` file.
 
 The `tidy.txt` in this repository was created by running the `run_analysis.R` script using R version 3.4.1 (2017-06-30) on Windows 10 64-bit edition.
 
