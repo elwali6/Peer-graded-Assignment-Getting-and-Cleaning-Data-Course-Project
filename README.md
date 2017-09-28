@@ -7,7 +7,7 @@ In this project, data collected from the accelerometer and gyroscope of the Sams
 This repository contains the following files:
 
 - `README.md`, this file, which provides an overview of the data set and how it was created.
-- `tidy_data.txt`, which contains the data set.
+- `tidy.txt`, which contains the data set.
 - `CodeBook.md`, the code book, which describes the contents of the data set (data, variables and transformations used to generate the data).
 - `run_analysis.R`, the R script that was used to create the data set (see the [Creating the data set](#creating-data-set) section below) 
 
@@ -32,8 +32,7 @@ The R script `run_analysis.R` can be used to create the data set. It retrieves t
 - Use descriptive activity names to name the activities in the data set.
 - Appropriately label the data set with descriptive variable names.
 - Create a second, independent tidy set with the average of each variable for each activity and each subject.
-- Write the data set to the `tidy_data.txt` file.
+- Write the data set to the `tidy.txt` file.
 
-The `tidy_data.txt` in this repository was created by running the `run_analysis.R` script using R version 3.2.2 (2015-08-14) on Windows 8.1 64-bit edition.
+The `tidy.txt` in this repository was created by running the `run_analysis.R` script using R version 3.4.1 (2017-06-30) on Windows 10 64-bit edition.
 
-This script requires the `dplyr` package (version 0.4.3 was used).
